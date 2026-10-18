@@ -1,0 +1,570 @@
+/*
+Definisikan Global Stling
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #263238;
+    background-color: #f5f7f6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 6%;
+    background-color: #f5f2e9;
+}
+
+.logo {
+    color: #17694a;
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav a {
+    color: #48554b;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+    color: #17694a;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+    max-width: 1440px;
+    max-height: 650px;
+    margin: 0 auto;
+    padding: 55px 8%;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.eyebrow {
+    margin-bottom: 24px;
+    color: #637c58;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.hero h1 {
+    max-width: 580px;
+    margin: 0 0 24px;
+    color: #26352f;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(38px, 4.2vw, 58px);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #17694a;
+}
+.hero-description {
+    max-width: 510px;
+    margin-bottom: 30px;
+    color: #62685f;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border: 1px solid #526e4c;
+    border-radius: 30px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #526e4c;
+}
+
+.btn-primary:hover {
+    background-color: #17694a;
+
+}
+
+.btn-secondary {
+    color: #526e4c;
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #e8e5d9;
+}
+
+.hero-image {
+    flex: 0 1 400px;
+    min-width: 0;
+    padding: 0;
+    border-radius: 36px;
+    background-color: #e9e1d4;
+}
+.hero-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 36px;
+
+}
+
+.interests h2 {
+    margin: 0 0 15px;
+    text-align: center;
+
+}
+
+.interests h2 {
+    color: #26352f;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 36px;
+}
+.section-description {
+    color: #62685f;
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 35px auto 0;
+
+}
+.interest-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid #e1e4dc;
+    border-radius: 20px;
+    background-color: #fffefa;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(38, 53, 47, 0.05);
+}
+.interest-icon {
+    font-size: 32px;
+}
+footer {
+    padding: 24px;
+    color: #62685f;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 22px 5%;
+    }
+
+    nav ul {
+        gap: 12px 18px;
+    }
+    .hero {
+        flex-direction: column;
+        gap: 35px;
+        min-height: auto;
+        padding: 45px 7%;
+    }
+    .hero-content {
+        width: 100%;
+        text-align: center;
+    }
+    .hero-description {
+        justify-content: center;
+    }
+    .hero-image {
+        flex: none;
+        width: min(100%, 350px);
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .interests {
+        padding: 45px 6%;
+    }
+}
+
+/*CSS untuk Biodata*/
+
+.biodata-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 65px 8%;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+}
+
+.biodata-photo {
+   flex: 0 0 35%;
+}
+
+.biodata-photo img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 18px;
+}
+
+.biodata-intro {
+    flex: 1;
+    min-height: 0;
+}
+
+.biodata-intro h1 {
+   
+    margin: 10px 0 22px;
+}
+.biodata-intro p {
+    line-height: 1.8;
+}
+
+.biodata-intro h1 span {
+    color: #17694a;
+}
+
+.biodata-intro p:not(.eyebrow) {
+    color: #64675e;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+.biodata-details {
+    padding: 55px 8%;
+    background-color: #ffffff;
+}
+.biodata-details.alt-bg {
+    background-color: #f5f3eb;
+}
+.biodata-details h2 {
+    color: #29382d;
+    font-size: 30px;
+    margin: 8px 0 25px;
+}
+
+.biodata-info {
+    max-width: 800px;
+}
+
+.biodata-info p {
+    padding: 12px 0;
+    border-bottom: 1px solid #e3e5df;
+    color: #555e54;
+}
+.biodata-info strong {
+    color: #17694a;
+}
+.hobby-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+
+}
+.hobby-card {
+    padding: 25px;
+    background-color: #f5f3eb;
+    border-radius: 18px;
+}
+.hobby-card h3 {
+    color: #17694a;
+
+}
+
+.hobby-card li {
+    margin-bottom: 10px;
+    color: #555e54;
+}
+
+.table-wraper {
+    width: 100%;
+    overflow-x: auto;
+}
+.table-wraper table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+.table-wraper th,
+.table-wraper td {
+    padding: 15px;
+    border: 1px solid #e1e5df;
+    text-align: left;
+}
+.table-wraper th {
+    background-color: #17694a;
+    color: #ffffff;
+}
+.table-wraper td {
+    color: #555e54;
+
+}
+
+@media (max-width: 768px) {
+    .biodata-hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 6%;
+        gap: 30px;
+    }
+.biodata-photo img {
+    max-width:  220px;
+    margin: 0 auto;
+}
+.biodata-details {
+    padding: 40px 7%;
+}
+.hobby-columns {
+    grid-template-columns: 1fr;
+}
+}
+
+
+/* CSS untuk My Holiday dan Contact */
+/* Holiday Hero*/
+
+.holiday-hero,
+.contact-hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 65px 8% 45px;
+    text-align: center;
+}
+
+.holiday-hero h1,
+.contact-hero h1 {
+    margin: 10px 0 20px;
+    color: #26352f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.2;
+}
+
+.holiday-hero h1 span,
+.contact-hero h1 span {
+    color: #17694a;
+}
+
+.holiday-hero > p:not(.eyebrow),
+.contact-hero > p:not(.eyebrow) {
+     max-width: 650px;
+    margin: 0 auto;
+    color: #62685f;
+   line-height: 1.8;
+}
+.holiday-content {
+    padding: 45px 8% 65px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.holiday-content h2,
+.contact-heading h2,
+.holiday-message h2,
+.contact-message h2 {
+    margin: 8px 0 18px;
+    color: #26352f;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: clamp(26px, 3vw, 34px);
+}
+.section-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #62685f;
+
+}
+
+.holiday-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.holiday-card {
+    overflow: hidden;
+    border: 1px solid #e1e4dc;
+    border-radius: 20px;
+    background-color: #fffefa;
+    box-shadow: 0 5px 18px rgba(38, 53, 47, 0.05);
+}
+
+.holiday-card img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-position: center;
+    object-fit: cover;
+}
+
+.holiday-card-content {
+    padding: 22px;
+}
+
+.holiday-card h3,
+.contact-card h3 {
+    margin: 0 0 12px;
+    color: #17694a;
+    font-size: 20px;
+}
+
+.holiday-card p,
+.contact-card p {
+    margin: 0;
+    color: #62685f;
+    line-height: 1.8;
+}
+
+.holiday-message,
+.contact-message {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.holiday-message p,
+.contact-message p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #62685f;
+    line-height: 1.8;
+}
+
+/* Contact Cards */
+.contact-section {
+    padding: 45px 8% 65px;
+    background-color: #ffffff;
+}
+
+.contact-heading {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-heading > p:last-child {
+    color: #62685f;
+    line-height: 1.8;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+.contact-card {
+    padding: 30px 24px;
+    border: 1px solid #e1e4dc;
+    border-radius: 20px;
+    background-color: #fffefa;
+    text-align: center;
+}
+
+.contact-icon {
+    margin-bottom: 15px;
+    font-size: 36px;
+}
+
+.contact-card a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #17694a;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.holiday-message {
+    background-color: #f5f3eb;
+}
+
+.contact-message {
+    background-color: #f5f3eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .holiday-hero,
+    .contact-hero {
+        padding: 45px 7% 35px;
+    }
+
+    .holiday-content,
+    .contact-section {
+        padding: 40px 7%;
+    }
+
+    .holiday-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .holiday-card img {
+        height: 250px;
+    }
+
+    .holiday-message,
+    .contact-message {
+        padding: 40px 7%;
+    }
+}
+
+
+
+
+
+
