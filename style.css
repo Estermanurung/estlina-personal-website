@@ -563,7 +563,51 @@ footer {
     }
 }
 
+/* Contact Form*/
+.contact-message form {
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+}
+.contact-message .form-group {
+    margin-bottom: 20px;
+}
+.contact-message label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.contact-message input,
+.contact-message textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
 
+}
+.contact-message textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+.contact-message button {
+    padding: 12px 24px;
+    background-color: #17694a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.contact-message button:hover{
+    background-color: #105238;
+}
+.contact-message .btn {
+    display: inline-block;
+    margin-top: 15px;
+}
 
 
 
